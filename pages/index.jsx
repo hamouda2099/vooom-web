@@ -28,7 +28,7 @@ const Index = () => {
                 You can order all you need from several places, food, desserts, stationary, grocery, etc. in one order through our delivery service only by detecting your location and everything you need will be delivered to your doorstep.
                 </p>
                 <div className="nice-select-one">
-                  <Link href="checkout" className="button button-2">
+                  <Link href="#" className="button button-2">
                     Order Now
                   </Link>
                 </div>

@@ -367,9 +367,13 @@ const About = () => {
                 <img alt="team-img" src="/assets/img/team-1.png" />
                 <h4>
                   {" "}
-                  <a href="#">Kevin Adamson</a>
+                  <a href="#">Emad Abaas</a>
                 </h4>
-                <p>Pellentesque adipiscing commodo elit at imperdiet dui.</p>
+                <p>CEO</p>
+                <p>Holding MBA from Maastricht University</p>
+                <p>18+ years of technical & business experience. </p>
+                <p>Business & Tech consultant for multinational companies </p>
+
                 <ul className="social-media">
                   <li>
                     {" "}
@@ -402,12 +406,23 @@ const About = () => {
                 <img alt="team-img" src="/assets/img/team-2.png" />
                 <h4>
                   {" "}
-                  <a href="#">Roxie Gilbert</a>
+                  <a href="#">Ibrahim Sokkar</a>
                 </h4>
                 <p>
-                  Velit dignissim sodales ut eu sem integer vitae. Interdum
-                  varius sit amet mattis.
+                Head of Operations
                 </p>
+                <p>
+                MBA in Business Informatics from
+Metropolia University of Applied
+Science, Finland
+                </p>
+                <p>
+                +20 years of experience at
+multinational corporations & startups,
+headed various IT positions & the GM
+of an ecommerce startup.
+                </p>
+              
                 <ul className="social-media">
                   <li>
                     {" "}
@@ -440,9 +455,17 @@ const About = () => {
                 <img alt="team-img" src="/assets/img/team-3.png" />
                 <h4>
                   {" "}
-                  <a href="#">Edgar Johnson</a>
+                  <a href="#">Mostafa Ahmed</a>
                 </h4>
-                <p>At erat pellentesque adipiscing commodo elit.</p>
+                <p>Head of UX/UI</p>
+
+                <p>BSc in Computer science and
+information technology</p>
+                <p>+20 years of User experience and
+product design field</p>
+                <p>UX/UI consultant of digital
+transformation for multinational entities</p>
+
                 <ul className="social-media">
                   <li>
                     {" "}
@@ -487,39 +510,28 @@ const About = () => {
             <SwiperSlide className="item">
               <div className="logo-img">
                 <img alt="logo-img" src="/assets/img/logo-1.png" />
-                <h5>Kings Arms</h5>
+                <h5>IBM</h5>
               </div>
             </SwiperSlide>
             <SwiperSlide className="item">
               <div className="logo-img">
                 <img alt="logo-img" src="/assets/img/logo-2.png" />
-                <h5>Wilmington</h5>
+                <h5>Linode</h5>
               </div>
             </SwiperSlide>
             <SwiperSlide className="item">
               <div className="logo-img">
                 <img alt="logo-img" src="/assets/img/logo-3.png" />
-                <h5>Kennington</h5>
+                <h5>Google</h5>
               </div>
             </SwiperSlide>
             <SwiperSlide className="item">
               <div className="logo-img">
                 <img alt="logo-img" src="/assets/img/logo-4.png" />
-                <h5>The Victoria</h5>
+                <h5>Mongo DB</h5>
               </div>
             </SwiperSlide>
-            <SwiperSlide className="item">
-              <div className="logo-img">
-                <img alt="logo-img" src="/assets/img/logo-5.png" />
-                <h5>The Andover Arms</h5>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide className="item">
-              <div className="logo-img">
-                <img alt="logo-img" src="/assets/img/logo-1.png" />
-                <h5>Kings Arms</h5>
-              </div>
-            </SwiperSlide>
+
           </Swiper>
         </div>
       </section>

@@ -55,10 +55,10 @@ const CheckoutFuntion = ({ sidebar }) => {
   return (
     <div className="checkout-order">
       <div className="title-checkout">
-        <h2>Your order:</h2>
-        {!sidebar && <h6>{cartData.length}</h6>}
+        <h2>Coming Sooon</h2>
+        {/* {!sidebar && <h6>{cartData.length}</h6>} */}
       </div>
-      <div className="banner-wilmington">
+      {/* <div className="banner-wilmington">
         <img alt="logo" src="assets/img/logo-s.jpg" />
         <h6>Kennington Lane Cafe</h6>
       </div>
@@ -124,7 +124,7 @@ const CheckoutFuntion = ({ sidebar }) => {
       <div className="totel-price">
         <span>To pay:</span>
         <h2>$ {Number(totalPrice).toFixed(2)}</h2>
-      </div>
+      </div> */}
     </div>
   );
 };

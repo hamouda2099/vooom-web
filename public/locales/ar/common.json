@@ -8,7 +8,27 @@
       "About description": "حول الوصف"
     },
     "header": {
-      "Home": "مسكن",
-      "About": "حول"
+      "Home": "الرئيسية",
+      "About": "حول",
+      "Services":"الخدمات",
+      "Vendor":"الشريك",
+      "FAQ":"الشروط والقوانين",
+      "Contacts":"التواصل",
+      "Order Now":"أطلب الان"
+    },
+    "footer": {
+      "title":"أفضل المطاعم في بيتك",
+      "description":"Vitae congue mauris rhoncus aenean. Enim nulla aliquet porttitor lacus luctus accumsan tortor posuere. Tempus egestas sed sed risus pretium quam.",
+      "location":"شارع ٢٧٣ ، عقار رقم ٥ ، المعادي ، القاهرة",
+      "copyRights":"حقوق النشر ٢٠٢٣ | الحقوق محفوظة لشركة فوووم",
+      "policy":"الخصوصية والقوانين",
+      "terms":"الشروط والاحكام",
+      "Menu": "القائمة",
+      "Home": "الرئيسية",
+      "About": "حول",
+      "Services":"الخدمات",
+      "Vendor":"الشريك",
+      "FAQ":"الاسئلة الشائعة",
+      "Contacts":"التواصل"
     }
   }

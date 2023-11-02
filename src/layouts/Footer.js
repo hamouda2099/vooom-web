@@ -1,6 +1,22 @@
 import Link from "next/link";
-
+import { useState } from "react";
+import { useRouter } from "next/router";
+import { useTranslation } from "next-i18next";
+import { useEffect } from "react";
 const Footer = () => {
+  const router = useRouter();
+  const { t } = useTranslation("");
+  useEffect(() => {
+    let dir = router.locale == "ar" ? "rtl" : "ltr";
+    let lang = router.locale == "ar" ? "ar" : "en";
+    document.querySelector("html").setAttribute("dir", dir);
+    document.querySelector("html").setAttribute("lang", lang);
+  }, [router.locale]);
+  const onClick = (e) => {
+    const body = document.querySelector("body");
+    body.classList.toggle("active");
+    e.preventDefault();
+  };
   return (
     <footer className="gap no-bottom" style={{ backgroundColor: "#363636" }}>
       <div className="container">
@@ -89,39 +105,32 @@ l-128 0 33 -72 c18 -40 151 -314 295 -608 289 -590 295 -600 375 -600 82 0 86
 </g>
 </svg>
               </Link>
-              <h2>The Best Restaurants in Your Home</h2>
+              <h2>{t("footer.title")}</h2>
               <p>
-                Vitae congue mauris rhoncus aenean. Enim nulla aliquet porttitor
-                lacus luctus accumsan tortor posuere. Tempus egestas sed sed
-                risus pretium quam.
+              {t("footer.description")}
               </p>
             </div>
           </div>
           <div className="col-lg-3 col-md-6 col-sm-12">
             <div className="menu">
-              <h4>Menu</h4>
+              <h4>{t("footer.Menu")}</h4>
               <ul className="footer-menu">
                 <li>
                   <Link href="/">
-                    home
+                  {t("footer.Home")}
                     <i className="fa-solid fa-arrow-right" />
                   </Link>
                 </li>
                 <li>
                   <Link href="about">
-                    about us
+                  {t("footer.About")}
                     <i className="fa-solid fa-arrow-right" />
                   </Link>
                 </li>
-                <li>
-                  <Link href="restaurants">
-                    Restaurants
-                    <i className="fa-solid fa-arrow-right" />
-                  </Link>
-                </li>
+              
                 <li>
                   <Link href="contacts">
-                    Contacts
+                  {t("footer.Contacts")}
                     <i className="fa-solid fa-arrow-right" />
                   </Link>
                 </li>
@@ -130,18 +139,14 @@ l-128 0 33 -72 c18 -40 151 -314 295 -608 289 -590 295 -600 375 -600 82 0 86
           </div>
           <div className="col-lg-4 col-md-6 col-sm-12">
             <div className="menu contacts">
-              <h4>Contacts</h4>
+              <h4>{t("footer.Contacts")}</h4>
               <div className="footer-location">
                 <i className="fa-solid fa-location-dot" />
-                <p>273 Street, Building No 5, Maadi, Cairo</p>
+                <p> {t("footer.location")}</p>
               </div>
               <a href="mailto:info@vooomapp.com">
                 <i className="fa-solid fa-envelope" />
                 info@vooomapp.com
-              </a>
-              <a href="callto:+14253261627">
-                <i className="fa-solid fa-phone" />
-                +1 425 326 16 27
               </a>
             </div>
             <ul className="social-media">
@@ -167,10 +172,10 @@ l-128 0 33 -72 c18 -40 151 -314 295 -608 289 -590 295 -600 375 -600 82 0 86
           </div>
         </div>
         <div className="footer-two gap no-bottom">
-          <p>Copyright © 2023. VOOOM. All rights reserved.</p>
+          <p> {t("footer.copyRights")}</p>
           <div className="privacy">
             {" "}
-            <a href="#">Privacy Policy</a> <a href="#">Terms &amp; Services</a>
+            <a href="#"> {t("footer.policy")}</a> <a href="#">{t("footer.terms")}</a>
           </div>
         </div>
       </div>

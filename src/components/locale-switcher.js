@@ -7,19 +7,21 @@ export default function LocaleSwitcher() {
   const { locales, locale: activeLocale } = router;
 
   const otherLocales = locales?.filter(
-    (locale) => locale !== activeLocale && locale !== "default"
+    (locale) => locale !== activeLocale
   );
 
   return (
     <span className="text-muted cursor-pointer">
       {otherLocales?.map((locale) => {
         const { pathname, query, asPath } = router;
+        console.log(locale);
         return (
+          
           <span key={"locale-" + locale}>
             <Link href={{ pathname, query }} as={asPath} locale={locale}>
-              
-                {locale === "en" ? "English" : locale === "ar" ? "عربى" : null}
-            </Link>
+              {locale === "en" ? "English" : locale === "ar" ? "عربى" : "English"}
+          </Link>
+            
           </span>
         );
       })}

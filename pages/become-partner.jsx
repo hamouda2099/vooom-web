@@ -1,11 +1,15 @@
 import Layout from "@/src/layouts/Layout";
+import { useTranslation } from "next-i18next";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import Link from "next/link";
 const BecomePartner = () => {
+  const { t } = useTranslation();
+
   return (
     <Layout headerExtaClass={"two"}>
       <section
         className="hero-section about blog-page gap"
-        style={{ backgroundImage: "url(assets/img/blog-img-1.jpg)" }}
+        style={{ backgroundImage: "url(/assets/img/blog-img-1.jpg)" }}
       >
         <div className="container">
           <div className="row align-items-center">
@@ -225,7 +229,7 @@ const BecomePartner = () => {
               data-aos-duration={300}
             >
               <div className="join-img-blog">
-                <img alt="join" src="assets/img/join-img.jpg" />
+                <img alt="join" src="/assets/img/join-img.jpg" />
               </div>
             </div>
             <div
@@ -273,7 +277,7 @@ const BecomePartner = () => {
               data-aos-duration={300}
             >
               <div className="news-posts-one blog">
-                <img alt="man" src="assets/img/news-1.jpg" />
+                <img alt="man" src="/assets/img/news-1.jpg" />
                 <div className="quickeat">
                   {" "}
                   <a href="#">news</a> <a href="#">quickeat</a>
@@ -316,7 +320,7 @@ const BecomePartner = () => {
               data-aos-duration={400}
             >
               <div className="news-posts-one blog">
-                <img alt="man" src="assets/img/news-2.jpg" />
+                <img alt="man" src="/assets/img/news-2.jpg" />
                 <div className="quickeat">
                   {" "}
                   <a href="#">news</a> <a href="#">quickeat</a>
@@ -360,7 +364,7 @@ const BecomePartner = () => {
               data-aos-duration={500}
             >
               <div className="news-posts-one blog">
-                <img alt="man" src="assets/img/news-3.jpg" />
+                <img alt="man" src="/assets/img/news-3.jpg" />
                 <div className="quickeat">
                   {" "}
                   <a href="#">news</a> <a href="#">quickeat</a>
@@ -416,3 +420,10 @@ const BecomePartner = () => {
   );
 };
 export default BecomePartner;
+export async function getStaticProps({ locale }) {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ["common"])),
+    },
+  };
+}

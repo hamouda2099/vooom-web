@@ -1,7 +1,33 @@
 {
     "home": {
       "Home title": "We Simplify every day of people's lives",
-      "Home description": "Home description"
+      "Home description": "You can order all you need from several places, food, desserts, stationary, grocery, etc. in one order through our delivery service only by detecting your location and everything you need will be delivered to your doorstep.",
+      "Order Now":"Order Now",
+      "How It Works":"How It Works",
+      "How It Works Sub Title":"Magna sit amet purus gravida quis blandit turpis cursus. Venenatis tellus in metus vulputate eu scelerisque felis.",
+      "Select shop":"Select shop",
+      "Make your order":"Make your order",
+      "Wait for delivery":"Wait for delivery",
+      "12 Best Restaurants in Your City":"12 Best Restaurants in Your City",
+      "12 Best Restaurants Sub Title":"Magna sit amet purus gravida quis blandit turpis cursus. Venenatis tellus in metus vulputate.",
+      "Heart Attack":"Heart Attack",
+      "Shawrmaa El-Reem":"Shawrmaa El-Reem",
+      "Bazooka":"Bazooka",
+      "see all":"SEE ALL",
+      "Food from your favorite restaurants to your table":"Food from your favorite restaurants to your table",
+      "Food from your favorite restaurants Sub Title":"Pretium lectus quam id leo in vitae turpis massa sed. Lorem donec massa sapien faucibus et molestie. Vitae elementum curabitur vitae nunc.",
+      "Burgers":"Burgers",
+      "Steaks":"Steaks",
+      "Pizza":"Pizza",
+      "Service shows good taste.":"Service shows good taste.",
+      "Satisfied Customer":"Satisfied Customer",
+      "Best Restaurants":"Best Restaurants",
+      "Food Delivered": "Food Delivered",
+      "What customers say about us":"What customers say about us",
+      "Want to Join Partnership?":"Want to Join Partnership?",
+      "learn more":"LEARN MORE",
+      "Join Merchant":"Join Merchat",
+      "Latest news and events":"Latest news and events"
     },
     "about": {
       "About title": "About title",
@@ -9,6 +35,26 @@
     },
     "header": {
       "Home": "Home",
-      "About": "About"
+      "About": "About",
+      "Services":"Services",
+      "Vendor":"Vendor",
+      "FAQ":"FAQ",
+      "Contacts":"Contacts",
+      "Order Now":"Order Now"
+    },
+    "footer": {
+      "title":"The Best Restaurants in Your Home",
+      "description":"Vitae congue mauris rhoncus aenean. Enim nulla aliquet porttitor lacus luctus accumsan tortor posuere. Tempus egestas sed sed risus pretium quam.",
+      "location":"273 Street, Building No 5, Maadi, Cairo",
+      "copyRights":"Copyright © 2023. VOOOM. All rights reserved.",
+      "policy":"Privacy and Policy",
+      "terms":"Terms and Conditions",
+      "Menu": "Menu",
+      "Home": "Home",
+      "About": "About",
+      "Services":"Services",
+      "Vendor":"Vendor",
+      "FAQ":"FAQ",
+      "Contacts":"Contacts"
     }
   }

@@ -131,18 +131,16 @@ l-128 0 33 -72 c18 -40 151 -314 295 -608 289 -590 295 -600 375 -600 82 0 86
                   <Link href="about">{t("header.About")}</Link>
                 </li>
                 <li className="navbar-dropdown">
-                  <Link href="restaurants">Vendor</Link>  
+                  <Link href="services">{t("header.Services")}</Link>  
                 </li>
                 <li className="navbar-dropdown">
-                  <Link href="#">Pages</Link>
-                  <div className="dropdown">
-                    <Link href="services">Services</Link>
-                    <Link href="become-partner">Become A Partner</Link>
-                    <Link href="faq">FAQ</Link>
-                  </div>
+                  <Link href="become-partner">{t("header.Vendor")}</Link>  
                 </li>
                 <li className="navbar-dropdown">
-                  <Link href="contacts">Contacts</Link>
+                  <Link href="faq">{t("header.FAQ")}</Link>  
+                </li>
+                <li className="navbar-dropdown">
+                  <Link href="contacts">{t("header.Contacts")}</Link>
                 </li>
                 <li> <LocaleSwitcher /></li>
               </ul>
@@ -158,8 +156,8 @@ l-128 0 33 -72 c18 -40 151 -314 295 -608 289 -590 295 -600 375 -600 82 0 86
               >
                 <i className="fa-solid fa-bag-shopping" />
               </a>
-              <Link href="checkout" className="button button-2">
-                Order Now
+              <Link href="" className="button button-2">
+              {t("header.Order Now")}
               </Link>
             </div>
           </div>

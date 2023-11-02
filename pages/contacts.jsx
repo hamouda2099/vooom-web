@@ -1,7 +1,11 @@
 import Subscribe from "@/src/components/Subscribe";
+import { useTranslation } from "next-i18next";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import Layout from "@/src/layouts/Layout";
 import Link from "next/link";
 const Contacts = () => {
+  const { t } = useTranslation();
+
   return (
     <Layout>
       <section className="hero-section about gap">
@@ -75,7 +79,7 @@ const Contacts = () => {
               data-aos-duration={400}
             >
               <div className="contact-us-img">
-                <img alt="contacts-img-girl" src="assets/img/contacts-1.png" />
+                <img alt="contacts-img-girl" src="/assets/img/contacts-1.png" />
               </div>
             </div>
           </div>
@@ -147,3 +151,10 @@ const Contacts = () => {
   );
 };
 export default Contacts;
+export async function getStaticProps({ locale }) {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ["common"])),
+    },
+  };
+}

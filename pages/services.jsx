@@ -1,7 +1,10 @@
 import Subscribe from "@/src/components/Subscribe";
 import Layout from "@/src/layouts/Layout";
+import { useTranslation } from "next-i18next";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import Link from "next/link";
 const Services = () => {
+  const { t } = useTranslation();
   return (
     <Layout>
       <section
@@ -33,10 +36,7 @@ const Services = () => {
                   Mauris nunc congue nisi vitae suscipit tellus mauris. Ac
                   tincidunt vitae semper quis lectus. Sollicitudin ac orci
                   phasellus egestas tellus.
-                </p>{" "}
-                <Link href="/restaurants" className="button button-2">
-                  Select Restaurant
-                </Link>
+                </p>
               </div>
             </div>
             <div
@@ -73,7 +73,7 @@ const Services = () => {
                   </div>
                   <div className="col-lg-6 col-md-6 col-sm-6 col-6">
                     <div className="counter-img">
-                      <img alt="man" src="/assets/img/man-1.jpg" />
+                      <img alt="man" src="/assets/img/man-2.jpg" />
                     </div>
                   </div>
                 </div>
@@ -373,3 +373,10 @@ const Services = () => {
   );
 };
 export default Services;
+export async function getStaticProps({ locale }) {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ["common"])),
+    },
+  };
+}
