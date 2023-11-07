@@ -619,10 +619,20 @@ a.button-2.non {
     top: 65%;
     left: 10%;
 }
+.Join-merchant {
+    position: absolute;
+    top: 65%;
+    left: 10%;
+}
 a.button.button-2 i {
     padding-left: 10px;
 }
 .Join-courier h3{
+    color: #7422FF;
+    font-weight: bold;
+    padding-bottom: 15px;
+}
+.Join-merchant h3{
     color: white;
     font-weight: bold;
     padding-bottom: 15px;

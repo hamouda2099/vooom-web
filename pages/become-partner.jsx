@@ -22,30 +22,38 @@ const BecomePartner = () => {
               <div className="about-text">
                 <ul className="crumbs d-flex">
                   <li>
-                    <Link href="/">Home</Link>
+                    <Link href="/">{t("vendor.Home")}</Link>
                   </li>
                   <li className="two">
                     <Link href="/">
                       <i className="fa-solid fa-right-long" />
-                      Blog
+                      {t("vendor.Vendor")}
                     </Link>
                   </li>
                 </ul>
-                <h2>Want to join partnership?</h2>
-                <p>
-                  Egestas sed tempus urna et pharetra pharetra massa. Fermentum
-                  posuere urna nec tincidunt praesent semper.
-                </p>
+                <h2>                {t("vendor.Want to join partnership?")}
+</h2>
               </div>
             </div>
             <div className="col-lg-6">
               <div className="join-courier">
-                <h3>Join Courier</h3>
+                <h3>                {t("vendor.Join As Partner")}
+</h3>
                 <p>
-                  Egestas sed tempus urna et pharetra pharetra massa. Fermentum
-                  posuere urna nec tincidunt praesent semper.
+                {t("vendor.line_1")}
                 </p>
-                <form
+                <br/>
+                <p>
+                {t("vendor.line_2")}
+
+                </p>
+
+                <br/>
+                <p>
+                {t("vendor.line_3")}
+
+                </p>
+                {/* <form
                   onSubmit={(e) => e.preventDefault()}
                   className="blog-form"
                 >
@@ -78,7 +86,7 @@ const BecomePartner = () => {
                     defaultValue={""}
                   />
                   <button className="button-price">Submit Application</button>
-                </form>
+                </form> */}
               </div>
             </div>
           </div>
@@ -94,11 +102,10 @@ const BecomePartner = () => {
               data-aos-duration={400}
             >
               <div className="benefit-text">
-                <h2>Benefits you get with Quickeat</h2>
+                <h2>{t("vendor.Benefits you get with VOOOM")}</h2>
                 <p>
-                  Suspendisse in est ante in. Duis at consectetur lorem donec
-                  massa. Eget lorem dolor sed viverra ipsum. Aliquam id diam
-                  maecenas ultricies mi. Nulla facilisi morbi tempus iaculis.
+                {t("vendor.benefits")}
+
                 </p>
               </div>
             </div>
@@ -117,13 +124,10 @@ const BecomePartner = () => {
               <div className="team-description">
                 <h4>
                   <i className="fa-solid fa-people-group" />
-                  Friendly Team
+                 
+                  {t("vendor.Friendly Team")}
                 </h4>
-                <p>
-                  Consequat semper viverra nam libero justo laoreet sit.
-                  Consequat semper viverra nam libero justo laoreet sit amet
-                  cursus. Morbi tincidunt ornare .
-                </p>
+                
               </div>
             </div>
             <div
@@ -135,13 +139,10 @@ const BecomePartner = () => {
               <div className="team-description">
                 <h4>
                   <i className="fa-regular fa-calendar-days" />
-                  Flexible Schedule
+                  
+                  {t("vendor.Flexible Schedule")}
                 </h4>
-                <p>
-                  Maecenas ultricies mi eget mauris pharetra. Sed ullamcorper
-                  morbi tincidunt ornare massa eget. Gravida neque convallis a
-                  cras semper.
-                </p>
+               
               </div>
             </div>
             <div
@@ -153,13 +154,10 @@ const BecomePartner = () => {
               <div className="team-description">
                 <h4>
                   <i className="fa-solid fa-briefcase" />
-                  Official Employment
+                  
+                  {t("vendor.Official Employment")}
                 </h4>
-                <p>
-                  Dignissim cras tincidunt lobortis feugiat vivamus at augue
-                  eget. Cursus risus at ultrices mi tempus imperdiet. Non diam
-                  phasellus vestibulum.
-                </p>
+                
               </div>
             </div>
             <div
@@ -171,13 +169,10 @@ const BecomePartner = () => {
               <div className="team-description end">
                 <h4>
                   <i className="fa-solid fa-money-bill-1-wave" />
-                  Stable Income
+                  
+                  {t("vendor.Stable Income")}
                 </h4>
-                <p>
-                  Dui sapien eget mi proin sed. Nibh nisl condimentum id
-                  venenatis a. Vulputate eu scelerisque felis imperdiet proin
-                  fermentum leo.{" "}
-                </p>
+                
               </div>
             </div>
             <div
@@ -189,13 +184,10 @@ const BecomePartner = () => {
               <div className="team-description end">
                 <h4>
                   <i className="fa-solid fa-arrow-up-right-dots" />
-                  Career Growth
+                  
+                  {t("vendor.Career Growth")}
                 </h4>
-                <p>
-                  Euismod quis viverra nibh cras pulvinar mattis nunc sed
-                  blandit. Neque viverra justo nec ultrices dui sapien. Volutpat
-                  est velit egestas.
-                </p>
+                
               </div>
             </div>
             <div
@@ -207,19 +199,16 @@ const BecomePartner = () => {
               <div className="team-description end">
                 <h4>
                   <i className="fa-solid fa-folder-open" />
-                  Full Insurance
+                  
+                  {t("vendor.Full Insurance")}
                 </h4>
-                <p>
-                  Cras semper auctor neque vitae tempus quam. Sed viverra tellus
-                  in hac habitasse platea. Sagittis aliquam malesuada bibendum
-                  arcu vitae.
-                </p>
+                
               </div>
             </div>
           </div>
         </div>
       </section>
-      <section className="join-community-section gap no-top">
+      {/* <section className="join-community-section gap no-top">
         <div className="container">
           <div className="row">
             <div
@@ -266,156 +255,7 @@ const BecomePartner = () => {
             </div>
           </div>
         </div>
-      </section>
-      <section className="news-about-us gap">
-        <div className="container">
-          <div className="row">
-            <div
-              className="col-xl-4 col-lg-6 col-md-6 col-sm-12"
-              data-aos="flip-up"
-              data-aos-delay={200}
-              data-aos-duration={300}
-            >
-              <div className="news-posts-one blog">
-                <img alt="man" src="/assets/img/news-1.jpg" />
-                <div className="quickeat">
-                  {" "}
-                  <a href="#">news</a> <a href="#">quickeat</a>
-                </div>
-                <h3>We Have Received An Award For The Quality Of Our Work</h3>
-                <p>
-                  Donec adipiscing tristique risus nec feugiat in fermentum.
-                  Sapien eget mi proin sed...
-                </p>{" "}
-                <Link href="/single-blog">
-                  Read More
-                  <i className="fa-solid fa-arrow-right" />
-                </Link>
-                <ul className="data">
-                  <li>
-                    <h6>
-                      <i className="fa-solid fa-user" />
-                      by Quickeat
-                    </h6>
-                  </li>
-                  <li>
-                    <h6>
-                      <i className="fa-regular fa-calendar-days" />
-                      01.Jan. 2022
-                    </h6>
-                  </li>
-                  <li>
-                    <h6>
-                      <i className="fa-solid fa-eye" />
-                      132
-                    </h6>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div
-              className="col-xl-4 col-lg-6 col-md-6 col-sm-12"
-              data-aos="flip-up"
-              data-aos-delay={300}
-              data-aos-duration={400}
-            >
-              <div className="news-posts-one blog">
-                <img alt="man" src="/assets/img/news-2.jpg" />
-                <div className="quickeat">
-                  {" "}
-                  <a href="#">news</a> <a href="#">quickeat</a>
-                </div>
-                <h3>With Quickeat you can order food for the whole day</h3>
-                <p>
-                  Nec tincidunt praesent semper feugiat nibh. Feugiat in ante
-                  metus dictum. Sapien nec sagittis aliquam malesuada bibendum
-                  arcu vitae. Non enim praesent elementum facilisis...
-                </p>{" "}
-                <Link href="/single-blog">
-                  Read More
-                  <i className="fa-solid fa-arrow-right" />
-                </Link>
-                <ul className="data">
-                  <li>
-                    <h6>
-                      <i className="fa-solid fa-user" />
-                      by Quickeat
-                    </h6>
-                  </li>
-                  <li>
-                    <h6>
-                      <i className="fa-regular fa-calendar-days" />
-                      01.Jan. 2022
-                    </h6>
-                  </li>
-                  <li>
-                    <h6>
-                      <i className="fa-solid fa-eye" />
-                      132
-                    </h6>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div
-              className="col-xl-4 col-lg-6 col-md-6 col-sm-12"
-              data-aos="flip-up"
-              data-aos-delay={400}
-              data-aos-duration={500}
-            >
-              <div className="news-posts-one blog">
-                <img alt="man" src="/assets/img/news-3.jpg" />
-                <div className="quickeat">
-                  {" "}
-                  <a href="#">news</a> <a href="#">quickeat</a>
-                </div>
-                <h3>127+ Couriers On Our Team!</h3>
-                <p>
-                  Pulvinar neque laoreet suspendisse interdum consectetur libero
-                  id faucibus nisl. Aliquam ultrices sagittis orci a scelerisque
-                  purus semper eget duis. Viverra vitae congue eu consequat...
-                </p>{" "}
-                <Link href="/single-blog">
-                  Read More
-                  <i className="fa-solid fa-arrow-right" />
-                </Link>
-                <ul className="data">
-                  <li>
-                    <h6>
-                      <i className="fa-solid fa-user" />
-                      by Quickeat
-                    </h6>
-                  </li>
-                  <li>
-                    <h6>
-                      <i className="fa-regular fa-calendar-days" />
-                      01.Jan. 2022
-                    </h6>
-                  </li>
-                  <li>
-                    <h6>
-                      <i className="fa-solid fa-eye" />
-                      132
-                    </h6>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div
-              className="button-gap"
-              data-aos="fade-up"
-              data-aos-delay={300}
-              data-aos-duration={400}
-            >
-              {" "}
-              <Link href="/blog" className="button button-2 non">
-                See All
-                <i className="fa-solid fa-arrow-right" />
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
+      </section> */}
     </Layout>
   );
 };

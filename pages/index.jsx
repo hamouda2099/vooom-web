@@ -1,13 +1,18 @@
 import Subscribe from "@/src/components/Subscribe";
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
-
+import { useRouter } from "next/router";
 import Layout from "@/src/layouts/Layout";
 import { sliderProps } from "@/src/sliderProps";
 import Link from "next/link";
 import { Swiper, SwiperSlide } from "swiper/react";
 const Index = () => {
   const { t } = useTranslation();
+  const router = useRouter();
+  const { locales, locale: activeLocale } = router;
+  const otherLocales = locales?.filter(
+    (locale) => locale !== activeLocale
+  );
   return (
     <Layout>
       <section
@@ -25,11 +30,11 @@ const Index = () => {
               <div className="restaurant">
                 <h1>{t("home.Home title")}</h1>
                 <p>
-                You can order all you need from several places, food, desserts, stationary, grocery, etc. in one order through our delivery service only by detecting your location and everything you need will be delivered to your doorstep.
-                </p>
+                {t("home.Home description")}
+                                </p>
                 <div className="nice-select-one">
                   <Link href="#" className="button button-2">
-                    Order Now
+                  {t("home.Order Now")}
                   </Link>
                 </div>
               </div>
@@ -45,16 +50,16 @@ const Index = () => {
                 <div className="wilmington">
                   <img alt="img" src="assets/img/photo-2.jpg" />
                   <div>
-                    <p>Restaurant of the Month</p>
-                    <h6>Shawerma EL-Reem</h6>
+                    <p>{t("home.Resturant of the month")}</p>
+                    <h6>{t("home.Shawrmaa El-Reem")}</h6>
 
                   </div>
                 </div>
                 <div className="wilmington location-restaurant">
                   <i className="fa-solid fa-location-dot" />
                   <div>
-                    <h6>12 Restaurant</h6>
-                    <p>In Your city</p>
+                    <h6>{t("home.Local Stores")}</h6>
+                    <p>{t("home.In your city")}</p>
                   </div>
                 </div>
               </div>
@@ -71,12 +76,9 @@ const Index = () => {
             data-aos-delay={200}
             data-aos-duration={300}
           >
-            <h2>How it works</h2>
+            <h2>{t("home.How It Works")}</h2>
             <p>
-              Magna sit amet purus gravida quis blandit turpis cursus. Venenatis
-              tellus in
-              <br /> metus vulputate eu scelerisque felis.
-            </p>
+           </p>
           </div>
           <div className="row ">
             <div
@@ -88,13 +90,13 @@ const Index = () => {
               <div className="work-card">
                 <img alt="img" src="assets/img/Illustration-1.png" />
                 <h4>
-                  <span>01</span> Select shop
+                  <span>01</span> {t("home.Select shop")}
                 </h4>
-                <p>
+                {/* <p>
                   Non enim praesent elementum facilisis leo vel fringilla.
                   Lectus proin nibh nisl condimentum id. Quis varius quam
                   quisque id diam vel.
-                </p>
+                </p> */}
               </div>
             </div>
             <div
@@ -106,13 +108,13 @@ const Index = () => {
               <div className="work-card">
                 <img alt="img" src="assets/img/Illustration-2.png" />
                 <h4>
-                  <span>02</span> Make your order
+                  <span>02</span> {t("home.Make your order")}
                 </h4>
-                <p>
+                {/* <p>
                   Eu mi bibendum neque egestas congue quisque. Nulla facilisi
                   morbi tempus iaculis urna id volutpat lacus. Odio ut sem nulla
                   pharetra diam sit amet.
-                </p>
+                </p> */}
               </div>
             </div>
             <div
@@ -124,13 +126,13 @@ const Index = () => {
               <div className="work-card">
                 <img alt="img" src="assets/img/illustration-3.png" />
                 <h4>
-                  <span>03</span> Wait for delivery
+                  <span>03</span> {t("home.Wait for delivery")}
                 </h4>
-                <p>
+                {/* <p>
                   Nunc lobortis mattis aliquam faucibus. Nibh ipsum consequat
                   nisl vel pretium lectus quam id leo. A scelerisque purus
                   semper eget. Tincidunt arcu non.
-                </p>
+                </p> */}
               </div>
             </div>
           </div>
@@ -150,10 +152,10 @@ const Index = () => {
               data-aos-duration={300}
             >
               <div className="city-restaurants">
-                <h2>12 Best Restaurants in Your City</h2>
+                <h2>{t("home.Local Stores in Your City")}</h2>
                 <p>
-                  Magna sit amet purus gravida quis blandit turpis cursus.
-                  Venenatis tellus in metus vulputate.
+                  
+                  {t("home.Support local stores by ordering from VOOOM")}
                 </p>
               </div>
             </div>
@@ -167,20 +169,20 @@ const Index = () => {
                 <img alt="logo" src="assets/img/logos-2.jpg" />
                 <div className="cafa">
                   <h4>
-                    <Link href="restaurant-card">Heart Attack</Link>
+                    <Link href="restaurant-card">{t("home.Heart Attack")}</Link>
                   </h4>
                   <div className="cafa-button">
                     {" "}
-                    <a href="#">american</a> <a href="#">steakhouse</a>{" "}
+                    <a href="#">{t("home.Burger")}</a> <a href="#">{t("home.Fried Chiecken")}</a>{" "}
                     <a className="end" href="#">
-                      seafood
+                      {t("home.Sandwiches")}
                     </a>
                   </div>
-                  <p>
+                  {/* <p>
                     Non enim praesent elementum facilisis leo vel fringilla.
                     Lectus proin nibh nisl condimentum id. Quis varius quam
                     quisque id diam vel.
-                  </p>
+                  </p> */}
                 </div>
               </div>
             </div>
@@ -194,20 +196,20 @@ const Index = () => {
                 <img alt="logo" src="assets/img/logos-1.jpg" />
                 <div className="cafa">
                   <h4>
-                    <Link href="restaurant-card">Shawrmaa El-Reem</Link>
+                    <Link href="restaurant-card">{t("home.Shawrmaa El-Reem")}</Link>
                   </h4>
                   <div className="cafa-button">
                     {" "}
-                    <a href="#">american</a> <a href="#">steakhouse</a>{" "}
+                    <a href="#">{t("home.Shawerma")}</a> <a href="#">{t("home.Orental")}</a>{" "}
                     <a className="end" href="#">
-                      seafood
+                    {t("home.Grill")}
                     </a>
                   </div>
-                  <p>
+                  {/* <p>
                     Vulputate enim nulla aliquet porttitor lacus luctus.
                     Suscipit adipiscing bibendum est ultricies integer. Sed
                     adipiscing diam donec adipiscing tristique.
-                  </p>
+                  </p> */}
                 </div>
               </div>
             </div>
@@ -221,29 +223,29 @@ const Index = () => {
                 <img alt="logo" src="assets/img/logos-3.jpg" />
                 <div className="cafa">
                   <h4>
-                    <Link href="restaurant-card">Bazooka</Link>
+                    <Link href="restaurant-card">{t("home.Bazooka")}</Link>
                   </h4>
                   
                   <div className="cafa-button">
                     {" "}
-                    <a href="#">healthy</a> <a href="#">steakhouse</a>{" "}
+                    <a href="#">{t("home.Burger")}</a> <a href="#"> {t("home.Sandwiches")}</a>{" "}
                     <a className="end" href="#">
-                      vegetarian
-                    </a>
+                    {t("home.Fried Chiecken")}
+                                        </a>
                   </div>
-                  <p>
+                  {/* <p>
                     Tortor at risus viverra adipiscing at in tellus. Cras semper
                     auctor neque vitae tempus. Dui accumsan sit amet nulla
                     facilisi. Sed adipiscing diam donec adipiscing tristique.
-                  </p>
+                  </p> */}
                 </div>
               </div>
             </div>
           </div>
           <div className="button-gap">
             <Link href="restaurants" className="button button-2 non">
-              See All
-              <i className="fa-solid fa-arrow-right" />
+            {t("home.see all")}
+            {activeLocale === 'en' ? <i className="fa-solid fa-arrow-right" /> : <i className="fa-solid fa-arrow-left" /> }  
             </Link>
           </div>
         </div>
@@ -265,16 +267,13 @@ const Index = () => {
                 <img alt="img" src="assets/img/photo-3.png" />{" "}
                 <a href="#" className="one">
                   <i className="fa-solid fa-burger" />
-                  Burgers
+                  {t("home.Burger")}
                 </a>{" "}
                 <a href="#" className="two">
                   <i className="fa-solid fa-cheese" />
-                  Steaks
+                  {t("home.Sandwiches")}
                 </a>{" "}
-                <a href="#" className="three">
-                  <i className="fa-solid fa-pizza-slice" />
-                  Pizza
-                </a>
+               
               </div>
             </div>
             <div
@@ -284,14 +283,12 @@ const Index = () => {
               data-aos-duration={400}
             >
               <div className="food-content-section">
-                <h2>Food from your favorite restaurants to your table</h2>
+                <h2>   {t("home.Food from your favorite restaurants to your table")}</h2>
                 <p>
-                  Pretium lectus quam id leo in vitae turpis massa sed. Lorem
-                  donec massa sapien faucibus et molestie. Vitae elementum
-                  curabitur vitae nunc.
+                {t("home.Experience the future of")}
                 </p>{" "}
-                <Link href="checkout" className="button button-2">
-                  Order Now
+                <Link href="#" className="button button-2">
+                {t("home.Order Now")}
                 </Link>
               </div>
             </div>
@@ -309,7 +306,8 @@ const Index = () => {
               data-aos-duration={300}
             >
               <div>
-                <h2>Service shows good taste.</h2>
+                <h2>{t("home.Service shows good taste.")}
+</h2>
               </div>
             </div>
             <div
@@ -324,13 +322,12 @@ const Index = () => {
                   data-to={976}
                   data-speed={2000}
                 >
-                  976
+                  
+                  2019
                 </h2>
                 <p>
-                  Satisfied
-                  <br />
-                  Customer
-                </p>
+                {t("home.Since")}          
+                      </p>
               </div>
             </div>
             <div
@@ -345,12 +342,10 @@ const Index = () => {
                   data-to={12}
                   data-speed={2000}
                 >
-                  12
+                  1.3K+
                 </h2>
                 <p>
-                  Best
-                  <br />
-                  Restaurants
+                {t("home.shops")}
                 </p>
               </div>
             </div>
@@ -366,13 +361,10 @@ const Index = () => {
                   data-to={1}
                   data-speed={2000}
                 >
-                  1
+                  1M+
                 </h2>
-                <span>k+</span>
                 <p>
-                  Food
-                  <br />
-                  Delivered
+                {t("home.orders")}
                 </p>
               </div>
             </div>
@@ -382,98 +374,7 @@ const Index = () => {
       {/* reviews-sections */}
       <section className="reviews-sections gap">
         <div className="container">
-          <div className="row align-items-center">
-            <div
-              className="col-xl-6 col-lg-12"
-              data-aos="fade-up"
-              data-aos-delay={200}
-              data-aos-duration={300}
-            >
-              <div className="reviews-content">
-                <h2>What customers say about us</h2>
-                <div className="custome owl-carousel">
-                  <Swiper {...sliderProps.index1Testmoninal}>
-                    <SwiperSlide className="item">
-                      <h4>
-                        "Dapibus ultrices in iaculis nunc sed augue lacus
-                        viverra vitae. Mauris a diam maecenas sed enim. Egestas
-                        diam in arcu cursus euismod quis. Quam quisque id diam
-                        vel".
-                      </h4>
-                      <div className="thomas">
-                        <img alt="girl" src="assets/img/photo-5.jpg" />
-                        <div>
-                          <h6>Thomas Adamson</h6>
-                          <i className="fa-solid fa-star" />
-                          <i className="fa-solid fa-star" />
-                          <i className="fa-solid fa-star" />
-                          <i className="fa-solid fa-star" />
-                          <i className="fa-solid fa-star" />
-                        </div>
-                      </div>
-                    </SwiperSlide>
-                    <SwiperSlide className="item">
-                      <h4>
-                        "Dapibus ultrices in iaculis nunc sed augue lacus
-                        viverra vitae. Mauris a diam maecenas sed enim. Egestas
-                        diam in arcu cursus euismod quis. Quam quisque id diam
-                        vel".
-                      </h4>
-                      <div className="thomas">
-                        <img alt="girl" src="assets/img/photo-5.jpg" />
-                        <div>
-                          <h6>Thomas Adamson</h6>
-                          <i className="fa-solid fa-star" />
-                          <i className="fa-solid fa-star" />
-                          <i className="fa-solid fa-star" />
-                          <i className="fa-solid fa-star" />
-                          <i className="fa-solid fa-star" />
-                        </div>
-                      </div>
-                    </SwiperSlide>
-                    <SwiperSlide className="item">
-                      <h4>
-                        "Dapibus ultrices in iaculis nunc sed augue lacus
-                        viverra vitae. Mauris a diam maecenas sed enim. Egestas
-                        diam in arcu cursus euismod quis. Quam quisque id diam
-                        vel".
-                      </h4>
-                      <div className="thomas">
-                        <img alt="girl" src="assets/img/photo-5.jpg" />
-                        <div>
-                          <h6>Thomas Adamson</h6>
-                          <i className="fa-solid fa-star" />
-                          <i className="fa-solid fa-star" />
-                          <i className="fa-solid fa-star" />
-                          <i className="fa-solid fa-star" />
-                          <i className="fa-solid fa-star" />
-                        </div>
-                      </div>
-                    </SwiperSlide>
-                  </Swiper>
-                  <div className="owl-nav mt-4">
-                    <button className="owl-prev">
-                      <i className="fa-solid fa-arrow-left"></i>
-                    </button>
-                    <button className="owl-next ms-3">
-                      <i className="fa-solid fa-arrow-right"></i>
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div
-              className="col-xl-6 col-lg-12"
-              data-aos="fade-up"
-              data-aos-delay={300}
-              data-aos-duration={400}
-            >
-              <div className="reviews-img">
-                <img alt="photo" src="assets/img/photo-4.png" />
-                <i className="fa-regular fa-thumbs-up" />
-              </div>
-            </div>
-          </div>
+          
         </div>
       </section>
       {/* join-partnership */}
@@ -482,7 +383,10 @@ const Index = () => {
         style={{ backgroundColor: "#363636" }}
       >
         <div className="container">
-          <h2>Want to Join Partnership?</h2>
+          <h2>
+            
+            {t("home.Want to Join Partnership?")}
+            </h2>
           <div className="row">
             <div
               className="col-lg-6"
@@ -493,9 +397,11 @@ const Index = () => {
               <div className="join-img">
                 <img alt="img" src="assets/img/photo-7.jpg" />
                 <div className="Join-courier">
-                  <h3>Join Courier</h3>
-                  <Link href="become-partner" className="button button-2">
-                    Learn More <i className="fa-solid fa-arrow-right" />
+                  <h3 >
+                  {t("home.Join A Vooomer")}
+                    </h3>
+                  <Link href="https://play.google.com/store/apps/details?id=com.nabil.vooomd&hl=en_US&gl=US" className="button button-2">
+                  {t("home.see all")} <i className="fa-solid fa-arrow-right" />
                   </Link>
                 </div>
               </div>
@@ -508,10 +414,13 @@ const Index = () => {
             >
               <div className="join-img">
                 <img alt="img" src="assets/img/photo-6.jpg" />
-                <div className="Join-courier">
-                  <h3>Join Merchant</h3>
-                  <Link href="become-partner" className="button button-2">
-                    Learn More <i className="fa-solid fa-arrow-right" />
+                <div className="Join-merchant">
+                  <h3>
+                  {t("home.Join Merchant")}
+                                      </h3>
+                  <Link href="contacts" className="button button-2">
+                  {t("home.see all")} 
+                  {activeLocale === 'en' ? <i className="fa-solid fa-arrow-right" /> : <i className="fa-solid fa-arrow-left" /> }  
                   </Link>
                 </div>
               </div>
@@ -522,7 +431,7 @@ const Index = () => {
       {/* news-section */}
       <section className="news-section gap">
         <div className="container">
-          <h2>Latest news and events</h2>
+          <h2> {t("home.Latest news and events")}</h2>
           <div className="row">
             <div
               className="col-xl-6 col-lg-12"
@@ -534,36 +443,30 @@ const Index = () => {
                 <img alt="man" src="assets/img/photo-8.jpg" />
                 <div className="quickeat">
                   {" "}
-                  <a href="#">news</a> <a href="#">quickeat</a>
+                  <a href="#">{t("home.news")}</a> <a href="#">{t("home.vooom")}</a>
                 </div>
-                <h3>We Have Received An Award For The Quality Of Our Work</h3>
-                <p>
+                <h3>{t("home.nile pioneers")}</h3>
+                {/* <p>
                   Donec adipiscing tristique risus nec feugiat in fermentum.
                   Sapien eget mi proin sed libero. Et magnis dis parturient
                   montes nascetur. Praesent semper feugiat nibh sed pulvinar
                   proin gravida.
-                </p>{" "}
-                <Link href="/single-blog">
-                  Read More
+                </p>{" "} */}
+                <Link href="https://fintechgate.net/2023/03/11/%d9%85%d8%a8%d8%a7%d8%af%d8%b1%d8%a9-%d8%b1%d9%88%d8%a7%d8%af-%d8%a7%d9%84%d9%86%d9%8a%d9%84-%d8%aa%d9%81%d8%aa%d8%ad-%d8%a8%d8%a7%d8%a8-%d8%a7%d9%84%d8%aa%d9%82%d8%af%d9%8a%d9%85-%d9%84%d9%84%d8%af-2/?fbclid=IwAR1o_8EKkmFEOOV1LkwBvsqaDiXyTuR2DcVo-NBDsLWxzRvWweNqgPpsDg0">
+                {t("home.see all")}
                   <i className="fa-solid fa-arrow-right" />
                 </Link>
                 <ul className="data">
                   <li>
                     <h6>
                       <i className="fa-solid fa-user" />
-                      by Quickeat
+                      {t("home.by vooom")}
                     </h6>
                   </li>
                   <li>
                     <h6>
                       <i className="fa-regular fa-calendar-days" />
-                      01.Jan. 2022
-                    </h6>
-                  </li>
-                  <li>
-                    <h6>
-                      <i className="fa-solid fa-eye" />
-                      132
+                      {t("home.mar 2023")}
                     </h6>
                   </li>
                 </ul>
@@ -580,34 +483,28 @@ const Index = () => {
                 <div className="news-post-two-data">
                   <div className="quickeat">
                     {" "}
-                    <a href="#">restaurants</a> <a href="#">cooking</a>
+                    <a href="#">{t("home.delivery")}</a> 
                   </div>
                   <h6>
-                    <Link href="single-blog">
-                      With Quickeat you can order food for the whole day
+                    <Link href="https://alwatnalakbr.com/%d8%b4%d8%b1%d9%83%d8%a9-%d9%81%d9%88%d9%88%d9%88%d9%85-%d8%aa%d8%b9%d9%84%d9%86-%d9%85%d9%82%d8%a7%d8%b7%d8%b9%d8%a9-%d8%aa%d9%88%d8%b5%d9%8a%d9%84-%d8%b7%d9%84%d8%a8%d8%a7%d8%aa-%d9%85%d9%86-%d9%85/">
+                    {t("home.Boycotting the delivery")}
                     </Link>
                   </h6>
-                  <p>
+                  {/* <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                     do eiusmod tempor...
-                  </p>
+                  </p> */}
                   <ul className="data">
                     <li>
                       <h6>
                         <i className="fa-solid fa-user" />
-                        by Quickeat
+                        {t("home.by vooom")}
                       </h6>
                     </li>
                     <li>
                       <h6>
                         <i className="fa-regular fa-calendar-days" />
-                        01.Jan. 2022
-                      </h6>
-                    </li>
-                    <li>
-                      <h6>
-                        <i className="fa-solid fa-eye" />
-                        132
+                        {t("home.nov 2023")}
                       </h6>
                     </li>
                   </ul>
@@ -618,32 +515,22 @@ const Index = () => {
                 <div className="news-post-two-data">
                   <div className="quickeat">
                     {" "}
-                    <a href="#">restaurants</a> <a href="#">cooking</a>
+                    <a href="#"> {t("home.supermarkets")}</a> 
                   </div>
                   <h6>
-                    <Link href="single-blog">127+ Couriers On Our Team!</Link>
+                    <Link href="https://www.facebook.com/photo?fbid=330620126002332&set=a.213925597671786"> {t("home.SOOON VMart in Tanta")} </Link>
                   </h6>
-                  <p>
-                    Urna condimentum mattis pellentesque id nibh tortor id
-                    aliquet. Tellus at urna condimentum mattis...
-                  </p>
                   <ul className="data">
                     <li>
                       <h6>
                         <i className="fa-solid fa-user" />
-                        by Quickeat
+                        {t("home.by vooom")}
                       </h6>
                     </li>
                     <li>
                       <h6>
                         <i className="fa-regular fa-calendar-days" />
-                        01.Jan. 2022
-                      </h6>
-                    </li>
-                    <li>
-                      <h6>
-                        <i className="fa-solid fa-eye" />
-                        132
+                        {t("home.sep 2023")}
                       </h6>
                     </li>
                   </ul>
@@ -654,34 +541,24 @@ const Index = () => {
                 <div className="news-post-two-data">
                   <div className="quickeat">
                     {" "}
-                    <a href="#">restaurants</a> <a href="#">cooking</a>
+                    <a href="#"> {t("home.shops")}</a> <a href="#"> {t("home.delivery")}</a>
                   </div>
                   <h6>
-                    <Link href="single-blog">
-                      Why You Should Optimize Your Menu for Delivery
+                    <Link href="">
+                    {t("home.Online Delivery in Tanta")} 
                     </Link>
                   </h6>
-                  <p>
-                    Enim lobortis scelerisque fermentum dui. Sit amet cursus sit
-                    amet dictum sit amet. Rutrum tellus...
-                  </p>
                   <ul className="data">
                     <li>
                       <h6>
                         <i className="fa-solid fa-user" />
-                        by Quickeat
+                        {t("home.by vooom")}
                       </h6>
                     </li>
                     <li>
                       <h6>
                         <i className="fa-regular fa-calendar-days" />
-                        01.Jan. 2022
-                      </h6>
-                    </li>
-                    <li>
-                      <h6>
-                        <i className="fa-solid fa-eye" />
-                        132
+                        {t("home.jan 2023")}
                       </h6>
                     </li>
                   </ul>

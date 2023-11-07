@@ -20,54 +20,34 @@ const Contacts = () => {
               <div className="about-text">
                 <ul className="crumbs d-flex">
                   <li>
-                    <Link href="/">Home</Link>
+                    <Link href="/">{t("contacts.Home")}</Link>
                   </li>
                   <li className="two">
                     <Link href="/">
                       <i className="fa-solid fa-right-long" />
-                      Contacts
+                      {t("contacts.Contacts")}
                     </Link>
                   </li>
                 </ul>
-                <h2>Contact us</h2>
-                <p>
-                  Egestas sed tempus urna et pharetra pharetra massa. Fermentum
-                  posuere urna nec tincidunt praesent semper.
-                </p>
+                <h2>{t("contacts.Contact Us")}</h2>
               </div>
               <div className="row">
                 <div className="col-lg-4 col-md-4 col-sm-12">
                   <div className="address">
                     <i className="fa-solid fa-location-dot" />
                     <h5>
-                      1717 Harrison St, San Francisco, CA 94103, United States
+                    {t("contacts.location")}
                     </h5>
                   </div>
                 </div>
                 <div className="col-lg-4 col-md-4 col-sm-12">
                   <div className="address">
                     <i className="fa-solid fa-envelope" />
-                    <a href="mailto:quick.info@mail.net">
-                      <h6>quick.info@mail.net</h6>
+                    <a href="mailto:info@vooomapp.com">
+                      <h6>info@vooomapp.com</h6>
                     </a>
-                    <span>Lorem ipsum dolor sit.</span>
-                    <a href="mailto:quick.info@mail.net">
-                      <h6>quick.info@mail.net</h6>
-                    </a>
-                    <span>Dolore magna aliqua</span>
-                  </div>
-                </div>
-                <div className="col-lg-4 col-md-4 col-sm-12">
-                  <div className="address">
-                    <i className="fa-solid fa-phone" />
-                    <a href="callto:+14253261627">
-                      <h6>+1 425 326 16 27</h6>
-                    </a>
-                    <span>Et netus et malesuada</span>
-                    <a href="callto:+14253261627">
-                      <h6>+1 425 326 16 27</h6>
-                    </a>
-                    <span>Enim tortor auctor urna</span>
+                    <span>{t("contacts.Contacts")}</span>
+                    
                   </div>
                 </div>
               </div>
@@ -97,12 +77,11 @@ const Contacts = () => {
             >
               <div className="contact-map-data">
                 <div className="join-courier content">
-                  <h3>Get in touch with us</h3>
+                  <h3>{t("contacts.Get in touch with us")}</h3>
                   <p>
-                    Magna sit amet purus gravida quis blandit turpis cursus.
-                    Venenatis tellus in metus vulputate eu scelerisque felis.
+                  {t("contacts.Get in touch with us")}
                   </p>
-                  <form
+                  {/* <form
                     onSubmit={(e) => e.preventDefault()}
                     className="blog-form"
                   >
@@ -127,11 +106,11 @@ const Contacts = () => {
                       defaultValue={""}
                     />
                     <button className="button-price">Submit Application</button>
-                  </form>
+                  </form> */}
                 </div>
                 <div className="contact-map">
                   <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2689446.104646556!2d28.705460424349365!3d48.83127549941125!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d1d9c154700e8f%3A0x1068488f64010!2sUkraine!5e0!3m2!1sen!2s!4v1661009847728!5m2!1sen!2s"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3456.0194956959376!2d31.272948282239888!3d29.97886971038419!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1458392bbc4e3c1b%3A0x9e8eccd6b6ec4d8b!2sVooom%20Company!5e0!3m2!1sen!2sus!4v1699356992693!5m2!1sen!2sus"
                     width={600}
                     height={450}
                     style={{ border: 0 }}

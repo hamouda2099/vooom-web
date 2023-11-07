@@ -152,20 +152,20 @@ l-128 0 33 -72 c18 -40 151 -314 295 -608 289 -590 295 -600 375 -600 82 0 86
             <ul className="social-media">
               <li>
                 {" "}
-                <a href="https://facebook.com" target="_blank">
+                <a href="https://www.facebook.com/Vooom.egy" target="_blank">
                   <i className="fa-brands fa-facebook-f" />
                 </a>
               </li>
               <li>
                 {" "}
-                <a href="https://instagram.com" target="_blank">
+                <a href="https://www.instagram.com/vooom.egy/" target="_blank">
                   <i className="fa-brands fa-instagram" />
                 </a>
               </li>
               <li>
                 {" "}
-                <a href="https://twitter.com" target="_blank">
-                  <i className="fa-brands fa-twitter" />
+                <a href="https://www.linkedin.com/company/vooomapp/" target="_blank">
+                  <i className="fa-brands fa-linkedin" />
                 </a>
               </li>
             </ul>

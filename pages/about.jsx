@@ -24,19 +24,15 @@ const About = () => {
               <div className="about-text">
                 <ul className="crumbs d-flex">
                   <li>
-                    <Link href="/">Home</Link>
+                    <Link href="/"> {t("about.Home")}</Link>
                   </li>
                   <li className="two">
                     <Link href="/">
-                      <i className="fa-solid fa-right-long" /> About Us
+                      <i className="fa-solid fa-right-long" /> {t("about.About")}
                     </Link>
                   </li>
                 </ul>
-                <h2>Nothing to worry about with Quickeat</h2>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor.
-                </p>
+                <h2> {t("about.title")}</h2>
               </div>
             </div>
             <div
@@ -63,7 +59,7 @@ const About = () => {
               data-aos-duration={400}
             >
               <div className="our-mission-img">
-                <img alt="Illustration" src="/assets/img/illustration-5.png" />
+                <img alt="Illustration" src="/assets/img/purple_logo.png" />
               </div>
             </div>
             <div
@@ -73,15 +69,10 @@ const About = () => {
               data-aos-duration={500}
             >
               <div className="our-mission-text">
-                <h2>Our mission is to save you time</h2>
+                <h2>{t("about.mission title")}</h2>
                 <p>
-                  Viverra vitae congue eu consequat ac felis. Imperdiet massa
-                  tincidunt nunc pulvinar sapien et ligula ullamcorper. Velit ut
-                  tortor pretium viverra suspendisse potenti nullam ac tortor.
-                  <br />
-                  <br />
-                  Eget egestas purus viverra accumsan in nisl nisi scelerisque.
-                  Tincidunt augue interdum velit euismod in pellentesque.
+                {t("about.mission description")}
+                 
                 </p>
               </div>
             </div>
@@ -109,11 +100,7 @@ const About = () => {
                   alt="icon"
                   src="/assets/img/service-icon-1.svg"
                 />
-                <h3>Free Delivery</h3>
-                <p>
-                  Cras fermentum odio eu feugiat pretium nibh ipsum. Ut faucibus
-                  pulvinar elementum consequat integer enim neque volutpat.
-                </p>
+                <h3>{t("about.free delivery")}</h3>
               </div>
             </div>
             <div
@@ -133,11 +120,8 @@ const About = () => {
                   alt="icon"
                   src="/assets/img/service-icon-4.svg"
                 />
-                <h3>Save Your Time</h3>
-                <p>
-                  Vulputate dignissim suspendisse in est ante in nibh mauris.
-                  Pretium nibh ipsum consequat nisl vel pretium lectus quam id.
-                </p>
+                <h3>{t("about.save time")}</h3>
+               
               </div>
             </div>
             <div
@@ -157,12 +141,8 @@ const About = () => {
                   alt="icon"
                   src="/assets/img/service-icon-6.svg"
                 />
-                <h3>Regular Discounts</h3>
-                <p>
-                  Nec tincidunt praesent semper feugiat nibh. Feugiat in ante
-                  metus dictum. Sapien nec sagittis aliquam malesuada bibendum
-                  arcu.
-                </p>
+                <h3>{t("about.regular discounts")}</h3>
+               
               </div>
             </div>
             <div
@@ -182,12 +162,8 @@ const About = () => {
                   alt="icon"
                   src="/assets/img/service-icon-8.svg"
                 />
-                <h3>Variety Food</h3>
-                <p>
-                  Molestie a iaculis at erat pellentesque. Pulvinar neque
-                  laoreet suspendisse interdum consectetur libero id faucibus
-                  nisl.
-                </p>
+                <h3>{t("about.Variety Food")}</h3>
+                
               </div>
             </div>
           </div>
@@ -204,33 +180,10 @@ const About = () => {
               data-aos-duration={300}
             >
               <div className="wait-a-minute">
-                <h2>Wait a minute for delicious</h2>
+                <h2>{t("about.Wait a minute for delicious")}</h2>
                 <p>
-                  Amet massa vitae tortor condimentum lacinia quis. Elit at
-                  imperdiet dui accumsan sit amet nulla facilisi. Lacus laoreet
-                  non curabitur gravida arcu ac tortor dignissim.
+                {t("about.Wait a minute description")}
                 </p>
-                <h6>Interdum varius sit amet mattis.</h6>
-                <ul className="paragraph">
-                  <li>
-                    <i className="fa-solid fa-circle-check" />
-                    <h5>Interdum varius sit amet mattis;</h5>
-                  </li>
-                  <li>
-                    <i className="fa-solid fa-circle-check" />
-                    <h5>Sed elementum tempus egestas sed sed;</h5>
-                  </li>
-                  <li>
-                    <i className="fa-solid fa-circle-check" />
-                    <h5>Sit amet purus gravida quis blandit;</h5>
-                  </li>
-                  <li>
-                    <i className="fa-solid fa-circle-check" />
-                    <h5>
-                      Feugiat pretium nibh ipsum consequat nisl vel pretium.
-                    </h5>
-                  </li>
-                </ul>
               </div>
             </div>
             <div
@@ -243,7 +196,7 @@ const About = () => {
                 <img alt="elements" src="/assets/img/elements-1.jpg" />
                 <a
                   data-fancybox
-                  href="https://www.youtube.com/watch?v=f0w7s47jPXA"
+                  href="https://www.youtube.com/watch?v=c42RmwsTnFY"
                 >
                   <i className="fa-solid fa-play" />
                 </a>
@@ -253,7 +206,7 @@ const About = () => {
         </div>
       </section>
       {/* about-counters-section */}
-      <section
+      {/* <section
         className="about-counters-section gap"
         style={{ backgroundImage: "url(/assets/img/background.png)" }}
       >
@@ -339,7 +292,7 @@ const About = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
       {/* Our Team Section */}
       <section className="our-team-section gap">
         <div className="container">
@@ -349,12 +302,7 @@ const About = () => {
             data-aos-delay={200}
             data-aos-duration={300}
           >
-            <h2>Our team</h2>
-            <p>
-              Enim lobortis scelerisque fermentum dui faucibus. Tempor commodo
-              ullamcorper a lacus vestibulum sed arcu non. Magna ac placerat
-              vestibulum lectus mauris.
-            </p>
+            <h2>{t("about.Our Team")}</h2>
           </div>
           <div className="row">
             <div
@@ -367,12 +315,12 @@ const About = () => {
                 <img alt="team-img" src="/assets/img/team-1.png" />
                 <h4>
                   {" "}
-                  <a href="#">Emad Abaas</a>
+                  <a href="#">{t("about.Emad Abaas")}</a>
                 </h4>
-                <p>CEO</p>
-                <p>Holding MBA from Maastricht University</p>
-                <p>18+ years of technical & business experience. </p>
-                <p>Business & Tech consultant for multinational companies </p>
+                <p>{t("about.CEO")}</p>
+                <p>{t("about.Holding MBA from Maastricht University")}</p>
+                <p>{t("about.18+ years of technical & business experience.")}</p>
+                <p>{t("about.Business & Tech consultant for multinational companies")} </p>
 
                 <ul className="social-media">
                   <li>
@@ -406,21 +354,16 @@ const About = () => {
                 <img alt="team-img" src="/assets/img/team-2.png" />
                 <h4>
                   {" "}
-                  <a href="#">Ibrahim Sokkar</a>
+                  <a href="#">{t("about.Ibrahim Sokkar")}</a>
                 </h4>
                 <p>
-                Head of Operations
+                {t("about.Head of Operations")}
                 </p>
                 <p>
-                MBA in Business Informatics from
-Metropolia University of Applied
-Science, Finland
+                {t("about.MBA in Business Informatics from Metropolia University of Applied Science, Finland")} 
                 </p>
                 <p>
-                +20 years of experience at
-multinational corporations & startups,
-headed various IT positions & the GM
-of an ecommerce startup.
+                {t("about.+20 years of experience at multinational corporations & startups, headed various IT positions & the GM of an ecommerce startup.")}
                 </p>
               
                 <ul className="social-media">
@@ -455,16 +398,13 @@ of an ecommerce startup.
                 <img alt="team-img" src="/assets/img/team-3.png" />
                 <h4>
                   {" "}
-                  <a href="#">Mostafa Ahmed</a>
+                  <a href="#">{t("home.Mostafa Ahmed")}</a>
                 </h4>
-                <p>Head of UX/UI</p>
+                <p>{t("about.Head of UX/UI")}</p>
 
-                <p>BSc in Computer science and
-information technology</p>
-                <p>+20 years of User experience and
-product design field</p>
-                <p>UX/UI consultant of digital
-transformation for multinational entities</p>
+                <p>{t("about.BSc in Computer science and information technology")}</p>
+                <p>{t("about.+20 years of User experience and product design field")}</p>
+                <p>{t("about.UX/UI consultant of digital transformation for multinational entities")}</p>
 
                 <ul className="social-media">
                   <li>
@@ -501,7 +441,7 @@ transformation for multinational entities</p>
       >
         <div className="container">
           <div className="hading">
-            <h2>Our trusted partners</h2>
+            <h2>{t("about.Our Trusted Partners")}</h2>
           </div>
           <Swiper
             {...sliderProps.logodata}
@@ -531,124 +471,19 @@ transformation for multinational entities</p>
                 <h5>Mongo DB</h5>
               </div>
             </SwiperSlide>
+            <SwiperSlide className="item">
+              <div className="logo-img">
+                <img alt="logo-img" src="/assets/img/logo-4.png" />
+                <h5>RAYA</h5>
+              </div>
+            </SwiperSlide>
 
           </Swiper>
         </div>
       </section>
       {/* Our partners Section */}
-      <section
-        className="service-shows gap"
-        data-aos="fade-up"
-        data-aos-delay={200}
-        data-aos-duration={300}
-      >
-        <div className="container-fluid">
-          <div className="row">
-            <div className="col-xl-4 col-lg-12">
-              <div className="good-taste">
-                <h2>Service shows good taste.</h2>
-                <p>
-                  Enim lobortis scelerisque fermentum dui faucibus. Tempor
-                  commodo ullamcorper a lacus vestibulum sed arcu non.
-                </p>
-              </div>
-            </div>
-            <div className="col-xl-8 col-lg-12">
-              <Swiper
-                {...sliderProps.commentSlide}
-                className="comment-data comment-slide owl-carousel owl-theme"
-              >
-                <SwiperSlide>
-                  <div className="author-text item">
-                    <p>
-                      "Tortor vitae purus faucibus ornare suspendisse. Ut
-                      porttitor leo a diam. Massa tincidunt nunc pulvinar sapien
-                      et ligula ullamcorper malesuada proin. Ut tortor pretium
-                      viverra suspendisse".
-                    </p>
-                    <div className="thomas">
-                      <img alt="girl" src="/assets/img/photo-5.jpg" />
-                      <div>
-                        <h6>Thomas Adamson</h6>
-                        <i className="fa-solid fa-star" />
-                        <i className="fa-solid fa-star" />
-                        <i className="fa-solid fa-star" />
-                        <i className="fa-solid fa-star" />
-                        <i className="fa-solid fa-star" />
-                      </div>
-                    </div>
-                  </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                  <div className="author-text item">
-                    <p>
-                      "Tortor vitae purus faucibus ornare suspendisse. Ut
-                      porttitor leo a diam. Massa tincidunt nunc pulvinar sapien
-                      et ligula ullamcorper malesuada proin. Ut tortor pretium
-                      viverra suspendisse".
-                    </p>
-                    <div className="thomas">
-                      <img alt="girl" src="/assets/img/photo-5.jpg" />
-                      <div>
-                        <h6>Thomas Adamson</h6>
-                        <i className="fa-solid fa-star" />
-                        <i className="fa-solid fa-star" />
-                        <i className="fa-solid fa-star" />
-                        <i className="fa-solid fa-star" />
-                        <i className="fa-solid fa-star" />
-                      </div>
-                    </div>
-                  </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                  <div className="author-text item">
-                    <p>
-                      "Tortor vitae purus faucibus ornare suspendisse. Ut
-                      porttitor leo a diam. Massa tincidunt nunc pulvinar sapien
-                      et ligula ullamcorper malesuada proin. Ut tortor pretium
-                      viverra suspendisse".
-                    </p>
-                    <div className="thomas">
-                      <img alt="girl" src="/assets/img/photo-5.jpg" />
-                      <div>
-                        <h6>Thomas Adamson</h6>
-                        <i className="fa-solid fa-star" />
-                        <i className="fa-solid fa-star" />
-                        <i className="fa-solid fa-star" />
-                        <i className="fa-solid fa-star" />
-                        <i className="fa-solid fa-star" />
-                      </div>
-                    </div>
-                  </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                  <div className="author-text item">
-                    <p>
-                      "Tortor vitae purus faucibus ornare suspendisse. Ut
-                      porttitor leo a diam. Massa tincidunt nunc pulvinar sapien
-                      et ligula ullamcorper malesuada proin. Ut tortor pretium
-                      viverra suspendisse".
-                    </p>
-                    <div className="thomas">
-                      <img alt="girl" src="/assets/img/photo-5.jpg" />
-                      <div>
-                        <h6>Thomas Adamson</h6>
-                        <i className="fa-solid fa-star" />
-                        <i className="fa-solid fa-star" />
-                        <i className="fa-solid fa-star" />
-                        <i className="fa-solid fa-star" />
-                        <i className="fa-solid fa-star" />
-                      </div>
-                    </div>
-                  </div>
-                </SwiperSlide>
-              </Swiper>
-            </div>
-          </div>
-        </div>
-      </section>
       {/* subscribe-section */}
-      <section
+      {/* <section
         className="subscribe-section about gap"
         style={{ backgroundImage: "url(/assets/img/background-img.jpg)" }}
       >
@@ -681,7 +516,7 @@ transformation for multinational entities</p>
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
     </Layout>
   );
 };
