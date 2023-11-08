@@ -67,6 +67,7 @@ const Index = () => {
           </div>
         </div>
       </section>
+      <Subscribe />
       {/* works-section */}
       <section className="works-section gap no-top">
         <div className="container">
@@ -575,7 +576,6 @@ const Index = () => {
         </div>
       </section>
       {/* subscribe-section */}
-      <Subscribe />
     </Layout>
   );
 };

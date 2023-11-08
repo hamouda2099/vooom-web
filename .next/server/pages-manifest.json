@@ -1,15 +1,6 @@
 {
   "/_app": "pages/_app.js",
-  "/_document": "pages/_document.js",
   "/_error": "pages/_error.js",
-  "/api/hello": "pages/api/hello.js",
-  "/about": "pages/about.js",
-  "/": "pages/index.js",
-  "/services": "pages/services.js",
-  "/contacts": "pages/contacts.js",
-  "/become-partner": "pages/become-partner.js",
-  "/en/500": "pages/en/500.html",
-  "/ar/500": "pages/ar/500.html",
-  "/en/404": "pages/en/404.html",
-  "/ar/404": "pages/ar/404.html"
+  "/_document": "pages/_document.js",
+  "/": "pages/index.js"
 }
