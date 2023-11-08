@@ -169,7 +169,9 @@ const Index = () => {
                 <img alt="logo" src="assets/img/logos-2.jpg" />
                 <div className="cafa">
                   <h4>
-                    <Link href="restaurant-card">{t("home.Heart Attack")}</Link>
+                   
+                   {t("home.Heart Attack")}
+                   
                   </h4>
                   <div className="cafa-button">
                     {" "}
@@ -196,7 +198,9 @@ const Index = () => {
                 <img alt="logo" src="assets/img/logos-1.jpg" />
                 <div className="cafa">
                   <h4>
-                    <Link href="restaurant-card">{t("home.Shawrmaa El-Reem")}</Link>
+                   
+                   {t("home.Shawrmaa El-Reem")}
+                   
                   </h4>
                   <div className="cafa-button">
                     {" "}
@@ -223,7 +227,9 @@ const Index = () => {
                 <img alt="logo" src="assets/img/logos-3.jpg" />
                 <div className="cafa">
                   <h4>
-                    <Link href="restaurant-card">{t("home.Bazooka")}</Link>
+                    
+                    {t("home.Bazooka")}
+                    
                   </h4>
                   
                   <div className="cafa-button">
@@ -243,8 +249,8 @@ const Index = () => {
             </div>
           </div>
           <div className="button-gap">
-            <Link href="restaurants" className="button button-2 non">
-            {t("home.see all")}
+            <Link href="become-partner" className="button button-2 non">
+            {t("home.join")}
             {activeLocale === 'en' ? <i className="fa-solid fa-arrow-right" /> : <i className="fa-solid fa-arrow-left" /> }  
             </Link>
           </div>
@@ -397,11 +403,11 @@ const Index = () => {
               <div className="join-img">
                 <img alt="img" src="assets/img/photo-7.jpg" />
                 <div className="Join-courier">
-                  <h3 >
+                  {/* <h3 >
                   {t("home.Join A Vooomer")}
-                    </h3>
+                    </h3> */}
                   <Link href="https://play.google.com/store/apps/details?id=com.nabil.vooomd&hl=en_US&gl=US" className="button button-2">
-                  {t("home.see all")} <i className="fa-solid fa-arrow-right" />
+                  {t("home.join")} <i className="fa-solid fa-arrow-right" />
                   </Link>
                 </div>
               </div>
@@ -415,11 +421,11 @@ const Index = () => {
               <div className="join-img">
                 <img alt="img" src="assets/img/photo-6.jpg" />
                 <div className="Join-merchant">
-                  <h3>
+                  {/* <h3>
                   {t("home.Join Merchant")}
-                                      </h3>
+                                      </h3> */}
                   <Link href="contacts" className="button button-2">
-                  {t("home.see all")} 
+                  {t("home.join")}
                   {activeLocale === 'en' ? <i className="fa-solid fa-arrow-right" /> : <i className="fa-solid fa-arrow-left" /> }  
                   </Link>
                 </div>

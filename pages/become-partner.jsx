@@ -53,6 +53,7 @@ const BecomePartner = () => {
                 {t("vendor.line_3")}
 
                 </p>
+                <br/>
                 {/* <form
                   onSubmit={(e) => e.preventDefault()}
                   className="blog-form"
@@ -107,6 +108,10 @@ const BecomePartner = () => {
                 {t("vendor.benefits")}
 
                 </p>
+                <br/>
+                <div><a href="contacts" className="button button-2">
+                  {t("home.join")} <i className="fa-solid fa-arrow-right" />
+                  </a></div>
               </div>
             </div>
           </div>

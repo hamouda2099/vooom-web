@@ -1,12 +1,13 @@
 {
-  "name": "quickeat",
+  "name": "vooom",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "export":"next export"
   },
   "dependencies": {
     "aos": "^2.3.4",
